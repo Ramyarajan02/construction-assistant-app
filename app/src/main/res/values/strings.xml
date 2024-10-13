@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ConstrutionAssistant</string>
+
+        <string name="land_area_s">Land Area (sq. meters)</string>
+        <string name="number_of_f">Number of Floors</string>
+        <string name="number_of_r">Number of Rooms</string>
+
+        <string-array name="house_designs">
+            <item>Traditional</item>
+            <item>Modern</item>
+            <item>Contemporary</item>
+        </string-array>
+
+
+
+
+</resources>
+
