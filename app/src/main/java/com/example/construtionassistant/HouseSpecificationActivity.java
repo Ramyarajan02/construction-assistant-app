@@ -1,11 +1,13 @@
 package com.example.construtionassistant;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -37,15 +39,43 @@ public class HouseSpecificationActivity extends AppCompatActivity {
         generateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle the generation of the house plan
+                generateHousePlan();
             }
         });
 
         contractorDetailsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle contractor details
+                navigateToContractorDetails();
             }
         });
+    }
+
+    private void generateHousePlan() {
+        // Retrieve input values
+        String landArea = landAreaEditText.getText().toString();
+        String numberOfFloors = numberOfFloorsEditText.getText().toString();
+        String numberOfRooms = numberOfRoomsEditText.getText().toString();
+        String houseDesign = houseDesignSpinner.getSelectedItem().toString();
+
+        // Validate input (simple example)
+        if (landArea.isEmpty() || numberOfFloors.isEmpty() || numberOfRooms.isEmpty()) {
+            Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Proceed to the next activity with the provided specifications
+        Intent intent = new Intent(HouseSpecificationActivity.this, ConstructionMaterialsActivity.class);
+        intent.putExtra("landArea", landArea);
+        intent.putExtra("numberOfFloors", numberOfFloors);
+        intent.putExtra("numberOfRooms", numberOfRooms);
+        intent.putExtra("houseDesign", houseDesign);
+        startActivity(intent);
+    }
+
+    private void navigateToContractorDetails() {
+        // Navigate to the Contractor Selection activity
+        Intent intent = new Intent(HouseSpecificationActivity.this, ContractorSelectionActivity.class);
+        startActivity(intent);
     }
 }

@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
 
+        <!-- Launcher Activity -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -19,21 +20,17 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".StartPageActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".HouseSpecificationActivity" />
-
-
-
-        <!-- Other activities can be declared here -->
+        <activity android:name=".StartPageActivity" android:exported="true" />
+        <activity android:name=".HomeActivity" android:exported="true" />
+        <activity android:name=".HouseSpecificationActivity" android:exported="true" />
+        <activity android:name=".BasedOnReviewActivity" android:exported="true" />
+        <activity android:name=".ConstructionMaterialsActivity" android:exported="true" />
+        <activity android:name=".ContractorSelectionActivity" android:exported="true" />
+        <activity android:name=".ProfileBasedContractorsActivity" android:exported="true" />
+        <activity android:name=".ReviewBasedContractorsActivity" android:exported="true" />
+        <activity android:name=".ImageAdapter" android:exported="true" />
+        <activity android:name=".MainActivity" android:exported="true" />
 
     </application>
-
 
 </manifest>
