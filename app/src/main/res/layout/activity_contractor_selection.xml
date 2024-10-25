@@ -5,53 +5,59 @@
     android:id="@+id/relativeLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200"
+    android:background="@drawable/img_17"
     android:padding="16dp">
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="401dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="20dp"
 
-        android:layout_marginTop="78dp"
-        android:layout_marginBottom="75dp"
-        android:background="#D9D"
+        android:layout_marginStart="59dp"
+
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="138dp"
+        android:background="#D873E9"
         android:text="Choose your Contractor"
-
         android:textColor="#4A148C"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/based_on_review"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/based_on_review"
-        android:layout_width="274dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="92dp"
-        android:backgroundTint="#D1C4E9"
+        android:layout_marginStart="62dp"
 
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="89dp"
+        android:backgroundTint="#D1C4E9"
         android:text="Based on Review"
         android:textColor="#4A148C"
         app:layout_constraintBottom_toTopOf="@+id/based_on_profile"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/based_on_profile"
-        android:layout_width="268dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="42dp"
-        android:layout_marginBottom="165dp"
-        android:backgroundTint="#D1C4E9"
+        android:layout_marginStart="68dp"
 
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="192dp"
+        android:backgroundTint="#D1C4E9"
         android:text="Based on Profile"
         android:textColor="#4A148C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/based_on_review" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
